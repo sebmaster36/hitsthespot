@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1 class='logo'>{&#9833}</h1>
+    <h1>Create a Playlist</h1>
+
+
+    <form method="POST">
+        <div class="form-group">
+        <label for="makePl">What type of vibe are you looking for? &#128064</label>
+            <select class="form-select custom-select form-control" id="makePl" aria-describedby="makeHelp" name="chosenVibe">
+
+                <option value="" disabled>Choose option</option>
+
+                <!-- iterate through every playlist (value selected = id, value displayed = name)-->
+                {% for vibe in vibes %}
+                    <option value="{{ vibe }}">{{ vibe }}</option>
+                {% endfor %}
+
+            </select>
+
+            <small id="makeHelp" class="form-text text-muted">Dont see your vibe? <a href="/create">Create your own</a></small>
+        </div>
+        <!-- submits put request -->
+        <button type="submit" class="btn btn-outline-secondary">Let's Vibe!</button>
+    </form>
+
+
+
+
+
+{% endblock content %}

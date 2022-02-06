@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1 class='logo'>{&#9833}</h1>
+    <h1>Vibes, just for you &#10084</h1>
+
+    <!-- Very similar, if not identical to vibe rated template -->
+    <table class="table table-striped mb-4">
+    <thead>
+    <tr>
+      <th scope="col">Track Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Artist</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for track in playlist %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ track.songname }}</td>
+                <td>{{ track.artistname }}</td>
+            </tr>
+        {% endfor %}
+
+        
+
+    </tbody>
+    </table>
+   
+    <form method="POST" class="pb-4">
+        <div class="form-group">
+        <label for="savePlaylist"><h6>Ready to get vibing?</h6></label>
+            <select class="custom-select form-control no-show" id="savePlaylist" name="saved">
+              <option value="{{ ids }}">blank</option>
+            </select>
+        </div>
+   
+        <button type="submit" class="btn btn-outline-secondary">Add to your Library!</button>
+        <div class="btn btn-outline-danger">
+            <a href="/landing">Cancel</a>
+        </div>
+    </form>    
+
+
+{% endblock content %}

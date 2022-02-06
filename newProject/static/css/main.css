@@ -1,0 +1,81 @@
+@media (min-width: 992px) {
+  .rounded-lg-3 { border-radius: .3rem; }
+}
+
+i {
+  color: #fff;
+
+}
+
+a {
+  color: #fff;
+}
+
+.nav-link:active {
+	color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+body {
+  background: #fafafa;
+  color: #fff;
+  margin-top: 1rem;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+.logo {
+	font-weight: 400;
+	font-size: 4.5rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+	color: #ffffff;
+	text-decoration: underline;
+	transition: 0.2s;
+}
+
+
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+label {
+	font-size: 1rem;
+}
+
+
+.table {
+  color: white;
+}
+
+
+.table #keep {
+  color: green;
+}
+
+.table #remove {
+  color: red;
+}
+
+.no-show {
+  display: none;
+}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1 class='logo'>{&#9833}</h1>
+    <h1>Your Score:</h1>
+
+    <div class='container pb-4'>
+        <h5>{{ name }}</h5>
+        <h2>{{ score }}%</h2>
+        <h6>{{ comment }}</h6>
+    </div>
+
+    <table class="table table-striped mb-4">
+  <thead>
+    <tr>
+      <th scope="col">Track Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Artist</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for track in playlist %}
+            <tr>
+                <td id="{{ track.keep }}">{{ loop.index }}</td>
+                <td id="{{ track.keep }}">{{ track.name }}</td>
+                <td id="{{ track.keep }}">{{ track.artist }}</td>
+                <td id="{{ track.keep }}">{{ track.score }}</td>
+            </tr>
+        {% endfor %}
+
+  </tbody>
+</table>
+
+<form method="POST" class="pb-4">
+        <div class="form-group">
+        <label for="createPlaylist"><h6>Trust us with your playlist's life?</h6></label>
+            <select class="custom-select form-control no-show" id="createPlaylist" name="created">
+              <option value="{{ new }}">blank</option>
+            </select>
+        </div>
+   
+        <button type="submit" class="btn btn-outline-secondary">Add to your Library!</button>
+        <div class="btn btn-outline-danger">
+            <a href="/landing">Cancel</a>
+        </div>
+    </form>
+
+{% endblock content %}
