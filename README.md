@@ -1,5 +1,5 @@
 # HitsTheSpot
-> Spotify Playlist Creator and Rater - Final Project for ND CSE-30246 (Database Systems Concepts)
+Spotify Playlist Creator and Rater - Final Project for ND CSE-30246 (Database Systems Concepts)
 
 # Project Components
 - Scripts used to make HTTP requests, scrape Spotify Web API, and populate MySQL database with Album, Artist, Song, and Extended Song metadata from JSON via PHP
