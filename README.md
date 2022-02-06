@@ -7,7 +7,7 @@ Spotify Playlist Creator and Rater - Final Project for ND CSE-30246 (Database Sy
 - 'Vibe Creator' playlist maker 
 - Flask app (templating/routing/etc.)
 
-# Getting Started
+~~# Getting Started~~
 1. Navigate to the directory
 `cd /var/www/html/cse30246/hits-the-spot/newProject`
 2. run the virtual environment
